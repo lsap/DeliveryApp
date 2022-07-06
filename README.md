@@ -9,3 +9,6 @@ Instalation:
 + enter command 'dotnet restore'
 + enter command 'dotnet run'
 + open 'localhost:5001' in you browser(Internet Explorer isn't supported)
+
+Example: http://deliveryapp.somee.com/
+In order to see orders: http://deliveryapp.somee.com/Admin/Orders
