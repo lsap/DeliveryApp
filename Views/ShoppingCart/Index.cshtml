@@ -1,0 +1,43 @@
+@model OrderViewModel
+@{
+    ViewData["Title"] = "Cart";
+    ViewData["PageName"] = "Cart";
+}
+<div class="col d-flex align-items-stretch pb-2">
+    <div class="panel text-light d-flex align-items-stretch">
+        <form asp-action="Order" class="d-flex flex-column w-100" id="orderForm">
+            <div class="form-group mb-4">
+                <label class="form-label" asp-for="CustomerName">Name:</label>
+                <input class="form-control" asp-for="CustomerName" />
+            </div>
+            <div class="form-group mb-4">
+                <label class="form-label" asp-for="Email">Email:</label>
+                <input class="form-control" asp-for="Email" />
+            </div>
+            <div class="form-group mb-4">
+                <label class="form-label" asp-for="Phone">Phone:</label>
+                <input class="form-control" asp-for="Phone" />
+            </div>
+            <div class="form-group mb-4">
+                <label class="form-label" asp-for="Address">Address:</label>
+                <input class="form-control" asp-for="Address" />
+            </div>
+            <div class="line">
+                <strong>Total price: <span id="totalPrice">0.0</span>$</strong>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col">
+    <div class="text-light panel overflow-auto" id="dishContainer">
+        <p class="w-100 text-center display-5">You have still chosen nothing.</p>
+    </div>
+</div>
+<script>
+    addEventListener("load", async ()=>{
+        await createOrderedDishCards();
+        calculateTotalPrice();
+        document.getElementById("orderForm").addEventListener("submit", (e)=>order(e));
+        });
+</script>

@@ -1,0 +1,18 @@
+@model Shop
+<div class="position-relative p-2 w-100">
+    <div class="w-100 row align-items-center text-light">
+        <figure class="col-4">
+            <img class="img-fluid rounded" src='@Url.Action("ShopLogo", new{imgName=Model.ImgName})' alt="@Model.Name">
+        </figure>
+        <div class="col">
+            <h6>@Model.Name</h6>
+            <p class="text-muted">@Model.Description</p>
+        </div>
+    </div>
+    <button class="cover-btn me-1" 
+            onclick="chooseShop(this);" 
+            name="shopBtn"
+            data-url='@Url.Action("GetDishes", new{shopId=Model.Id})'
+            data-img-url='@Url.Action("Photo")'
+            data-id='@Model.Id'></button>
+</div>

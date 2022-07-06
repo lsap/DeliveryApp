@@ -1,0 +1,24 @@
+﻿@model ShopListViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["PageName"] = "Shop";
+}
+<div class="col-md-4 d-flex align-items-stretch pb-2">
+    <div class="panel d-flex flex-column">
+        <h5 class="text-light border-bottom p-1">Shops:</h5>
+        <div class="overflow-auto flex-1">
+            @foreach(var shop in Model.Shops)
+            {
+                <partial name="_ShopCard" model="shop" />
+            }
+        </div>
+    </div>
+</div>
+<div class="col">
+    <div class="row g-2 text-light" id="dishContainer">
+        <p class="w-100 text-center display-5">Choose shop</p>
+    </div>
+</div>
+<script>
+    addEventListener("load", ()=>updateBtns());
+</script>

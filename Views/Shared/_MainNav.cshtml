@@ -1,0 +1,13 @@
+@model string
+<nav>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" style='@(Model=="Shop"?"text-decoration: underline":"")' 
+                asp-action="Index" asp-controller="Shop">Shop</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style='@(Model=="Cart"?"text-decoration: underline":"")'
+                asp-action="Index" asp-controller="ShoppingCart">Shopping Cart</a>
+        </li>
+    </ul>
+</nav>

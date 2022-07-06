@@ -1,0 +1,64 @@
+﻿body{
+  background-image: url(../bg.jfif);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.main-header{
+  background-color: rgba(47, 47, 76, 0.8);
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+.panel{
+  width: 100%;
+  background-color: rgba(47, 47, 76, 0.8);
+  padding: 1rem 2rem;
+  border-radius: .4rem;
+  height: calc(100vh - 7rem);
+}
+.dish-card{
+  background-color: rgba(47, 47, 76, 0.8);
+  padding: 0.4rem;
+  border-radius: .4rem;
+}
+.dish-card img{
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.nav-link{
+  color: white !important;
+}
+button.cover-btn{
+  width:100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+  background: transparent;
+}
+button.cover-btn.active{
+  background-color: #fff5;
+}
+button.cover-btn:disabled{
+  background-color: rgba(47, 47, 76, 0.3);
+}
+.line{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ordered-dish-card{
+  padding: 1rem;
+  margin-bottom: 0.4rem;
+}
+.ordered-dish-card img{
+  object-fit: cover;
+  height: 12rem;
+}
